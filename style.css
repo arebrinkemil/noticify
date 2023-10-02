@@ -67,6 +67,10 @@ header {
   margin: 0 3rem 0 3rem;
 }
 
+header a {
+  text-decoration: none;
+}
+
 header ul {
   display: flex;
   gap: 1rem;
@@ -208,9 +212,46 @@ main {
   background-color: var(--green-solid);
 }
 
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.date {
+  color: #8a8a8a;
+}
+
+.card-information {
+  width: 40%;
+}
+
+.cardText {
+  font-size: 1.2 rem;
+  margin: 3rem 0 2rem 0;
+}
+
+.contact {
+  width: 20%;
+}
+
 @media (min-width: 750px) and (max-width: 1199px) {
   .card {
     width: 38%;
+  }
+
+  .card-information {
+    width: 50%;
+  }
+
+  .contact {
+    width: 40%;
   }
 
   .cards {
@@ -253,6 +294,14 @@ main {
     width: 80%;
   }
 
+  .contact {
+    width: 50%;
+  }
+
+  .card-information {
+    width: 70%;
+  }
+
   main {
     flex-direction: column-reverse;
     margin: 2rem;
@@ -280,17 +329,25 @@ main {
     background-color: #121212;
   }
 
-  .card {
+  .card,
+  .card-information {
     background-color: #1e1e1e;
   }
 
+  .card-information {
+    padding: 2rem;
+    border-radius: 0.6rem;
+  }
+
   h1,
-  h3 {
+  h3,
+  .cardText {
     color: #e0e0e0;
   }
 
   p,
-  li a {
+  li a,
+  .contact {
     color: #b0b0b0;
   }
 }
